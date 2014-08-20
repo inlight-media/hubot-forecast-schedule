@@ -64,7 +64,7 @@ module.exports = function(robot) {
 	 * show schedule for Example Project
 	 */
 	robot.respond(/show ((\d+) day |)(schedule|forecast)(| for (.*))$/, function(msg) {
-		var days = match[2] ? parseInt(match[2], 10) : 1;
+		var days = msg.match[2] ? parseInt(msg.match[2], 10) : 1;
 		var term = msg.match[5] || '';
 
 		var options = {
