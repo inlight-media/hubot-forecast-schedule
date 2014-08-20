@@ -1,0 +1,28 @@
+{
+  "name": "hubot-forecast-schedule",
+  "version": "0.0.1",
+  "description": "A hubot script for showing Forecast schedules",
+  "keywords": [
+    "hubot",
+    "forecast",
+    "schedule"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Tony Milne",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inlight-media/hubot-forecast-schedule.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.9.0",
+    "forecast-api": "0.0.1",
+    "moment": "^2.8.1",
+    "moment-range": "^1.0.2",
+    "underscore": "^1.6.0"
+  },
+  "devDependencies": {}
+}
