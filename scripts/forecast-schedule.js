@@ -42,7 +42,7 @@ module.exports = function(robot) {
 			if (err) {
 				return msg.send(err);
 			}
-			_.map(lines, msg.send);
+			msg.send(lines.join('\n'));
 		});
 	});
 
@@ -51,7 +51,7 @@ module.exports = function(robot) {
 			if (err) {
 				return msg.send(err);
 			}
-			_.map(lines, msg.send);
+			msg.send(lines.join('\n'));
 		});
 	});
 
@@ -76,7 +76,7 @@ module.exports = function(robot) {
 			if (err) {
 				return msg.send(err);
 			}
-			_.map(lines, msg.send);
+			msg.send(lines.join('\n'));
 		});
 	});
 };
