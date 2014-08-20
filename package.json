@@ -1,6 +1,6 @@
 {
   "name": "hubot-forecast-schedule",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A hubot script for showing Forecast schedules",
   "keywords": [
     "hubot",
