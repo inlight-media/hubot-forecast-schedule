@@ -138,7 +138,7 @@ function schedule(term, options, callback) {
 		else {
 			getPersonOrProject(term, data, function(err, obj) {
 				if (err) {
-					throw err;
+					return callback(err);
 				}
 
 				if (obj.type === 'person') {
