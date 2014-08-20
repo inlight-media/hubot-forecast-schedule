@@ -42,7 +42,7 @@ module.exports = function(robot) {
 			if (err) {
 				return msg.send(err);
 			}
-			_.map(lines, msg.send);
+			msg.send(lines.join('\n'));
 		});
 	});
 
@@ -51,7 +51,7 @@ module.exports = function(robot) {
 			if (err) {
 				return msg.send(err);
 			}
-			_.map(lines, msg.send);
+			msg.send(lines.join('\n'));
 		});
 	});
 
@@ -64,7 +64,7 @@ module.exports = function(robot) {
 	 * show schedule for Example Project
 	 */
 	robot.respond(/show ((\d+) day |)(schedule|forecast)(| for (.*))$/, function(msg) {
-		var days = match[2] ? parseInt(match[2], 10) : 1;
+		var days = msg.match[2] ? parseInt(msg.match[2], 10) : 1;
 		var term = msg.match[5] || '';
 
 		var options = {
@@ -76,7 +76,7 @@ module.exports = function(robot) {
 			if (err) {
 				return msg.send(err);
 			}
-			_.map(lines, msg.send);
+			msg.send(lines.join('\n'));
 		});
 	});
 };
@@ -108,7 +108,7 @@ function projects(callback) {
 		lines.push('Listing projects in Forecast:');
 		projects.forEach(function(project) {
 			if (!project.archived) {
-				lines.push(project.name);
+				lines.push('\t' + project.name);
 			}
 		});
 		callback(null, lines);
