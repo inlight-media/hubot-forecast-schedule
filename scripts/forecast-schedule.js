@@ -108,7 +108,7 @@ function projects(callback) {
 		lines.push('Listing projects in Forecast:');
 		projects.forEach(function(project) {
 			if (!project.archived) {
-				lines.push(project.name);
+				lines.push('\t' + project.name);
 			}
 		});
 		callback(null, lines);
