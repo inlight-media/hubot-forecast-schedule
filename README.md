@@ -20,10 +20,11 @@ Ensure you've updated your hubot package.json file and included this script's de
 - FORECAST_ACCOUNT_ID
 - FORECAST_AUTHORIZATION
 
-You can find your accountId and authorization token by inspecting any of the Forecast headers. View the forecast-api module for more info.
+You can find your accountId and authorization token by inspecting any of the Forecast headers. View the [forecast-api module](http://github.com/inlight-media/node-forecast-api) for more info.
 
 ## Commands
 
+```
 hubot show forecast projects
 hubot show forecast people
 hubot show [x day] (schedule|forecast)
@@ -33,3 +34,4 @@ hubot show [x day] (schedule|forecast) [for project name]
 E.g. hubot show forecast projects
 E.g. hubot show 3 day schedule for Tony
 E.g. hubot show forecast for Project X
+```
